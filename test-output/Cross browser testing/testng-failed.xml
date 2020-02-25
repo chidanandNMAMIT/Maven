@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Cross browser testing]" parallel="tests">
+  <test name="chrome Test(failed)" parallel="tests">
+    <parameter name="password" value="aravind"/>
+    <parameter name="browserName" value="chrome"/>
+    <parameter name="url" value="https://www.hubspot.com"/>
+    <parameter name="email" value="aravindcr11@gmail.com"/>
+    <classes>
+      <class name="seleniumGrid.ParallelExecution">
+        <methods>
+          <include name="logintest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- seleniumGrid.ParallelExecution -->
+    </classes>
+  </test> <!-- chrome Test(failed) -->
+  <test name="firefox Test(failed)" parallel="tests">
+    <parameter name="password" value="aravind"/>
+    <parameter name="browserName" value="firefox"/>
+    <parameter name="url" value="https://www.hubspot.com"/>
+    <parameter name="email" value="aravindcr11@gmail.com"/>
+    <classes>
+      <class name="seleniumGrid.ParallelExecution">
+        <methods>
+          <include name="logintest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- seleniumGrid.ParallelExecution -->
+    </classes>
+  </test> <!-- firefox Test(failed) -->
+</suite> <!-- Failed suite [Cross browser testing] -->

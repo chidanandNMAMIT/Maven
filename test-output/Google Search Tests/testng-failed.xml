@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Google Search Tests]" parallel="tests">
+  <parameter name="node" value="http://192.168.43.121:4444"/>
+  <parameter name="os" value="windows"/>
+  <parameter name="url" value="https://www.google.com/"/>
+  <test name="Tests on IE11(failed)" parallel="tests">
+    <parameter name="browser" value="ie11"/>
+    <classes>
+      <class name="seleniumGrid.GoogleSearchTest">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="googleTitleTest"/>
+          <include name="googleUrlTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- seleniumGrid.GoogleSearchTest -->
+    </classes>
+  </test> <!-- Tests on IE11(failed) -->
+  <test name="Tests on Firefox(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="seleniumGrid.GoogleSearchTest">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="googleTitleTest"/>
+          <include name="googleUrlTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- seleniumGrid.GoogleSearchTest -->
+    </classes>
+  </test> <!-- Tests on Firefox(failed) -->
+  <test name="Tests on Chrome(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="seleniumGrid.GoogleSearchTest">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="googleTitleTest"/>
+          <include name="googleUrlTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- seleniumGrid.GoogleSearchTest -->
+    </classes>
+  </test> <!-- Tests on Chrome(failed) -->
+</suite> <!-- Failed suite [Google Search Tests] -->
